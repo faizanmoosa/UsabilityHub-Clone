@@ -3,7 +3,9 @@
     <head>
         <title>My Website !!</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="media_queries.css">
         <script src="https://kit.fontawesome.com/925123d209.js" crossorigin="anonymous"></script>
+        
     </head>
     <body>
         <div class="top-banner">
@@ -18,7 +20,7 @@
                 <a href="#" class="company-logo">
                     <img src="asset 1.png" alt="Company Logo">
                 </a>
-                <div class="nav-links">
+                <div class="nav-links" id="nav-links">
                     <ul class="flex">
                         <li>
                             <a href="#" class="hover-link">Products</a>
@@ -40,6 +42,9 @@
                         </li>
                     </ul>
                 </div>
+                <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
             </div>
         </nav>
         <header>
@@ -58,7 +63,7 @@
             <section class="companies-section">
                 <div class="container">
                     <div class="small-bold-text companies-header">
-                        The world’s best companies rely on UsabilityHub to make better design decisions.
+                        The world's best companies rely on UsabilityHub to make better design decisions.
                     </div>
                     <div class="logos flex">
                         <img src="asset 3.png" alt="Amazon" class="logo">
@@ -130,15 +135,15 @@
                 </div>
             </section>
             <section class="big-feature-section">
-                <div class="container flex big-feature-container">
+                <div class="container flex big-feature-container" id="second-big-feature">
+                    <div class="feature-img">
+                        <img src="asset 21.png" alt="Marketers">
+                    </div>
                     <div class="feature-description flex">
                         <h4>Optimisation for</h4>
                         <h2>Marketers</h2>
                         <p>Fine-tune landing pages, messaging, and creative, helping you optimise conversion rates on marketing campaigns and product launches.
                         </p>
-                    </div>
-                    <div class="feature-img">
-                        <img src="asset 21.png" alt="Marketers">
                     </div>
                 </div>
             </section>
@@ -177,7 +182,7 @@
                 </div>
             </section>
             <section class="cta-section">
-                <div class="container flex">
+                <div class="container flex cta-section-container">
                     <div class="cta-section-left flex">
                         <h2 class="cta-h2">No participants?</h2>
                         <h2>No problem.</h2>
@@ -197,7 +202,7 @@
                                 </div>
                             </div>
                         </ul>
-                        <a href="#" class="hover-link primary-button">Learn more</a>
+                        <a href="#" class="primary-button">Learn more</a>
                     </div>
                     <div class="cta-section-right">
                         <img src="asset 38.png" alt="USD $1">
@@ -255,5 +260,13 @@
                 <a href="#" class="hover-link"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
+        <!-- JavaScript Code -->
+        <script>
+            const toggleButton = document.getElementById('nav-toggle');
+            const navLinks = document.getElementById('nav-links');
+            toggleButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            })
+        </script>
     </body>
 </html>
